@@ -12,19 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_08_18_202417) do
 
-  create_table "flight", force: :cascade do |t|
+  create_table "flights", force: :cascade do |t|
     t.string "airline_name"
     t.string "date"
     t.string "destination"
   end
 
-  create_table "passangers", force: :cascade do |t|
+  create_table "passengers", force: :cascade do |t|
     t.string "name"
     t.string "destination"
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.integer "passanger_id"
+    t.integer "passenger_id"
     t.integer "flight_id"
     t.boolean "baggage"
   end
